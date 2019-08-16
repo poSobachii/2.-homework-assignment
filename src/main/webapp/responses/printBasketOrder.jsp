@@ -1,4 +1,4 @@
-<%@ page import="MyShop2.BasketPack.BasketOrder"%>
+<%@ page import="Webshop.BasketPack.BasketOrder"%>
 
 <%
 BasketOrder.printJSBasket();

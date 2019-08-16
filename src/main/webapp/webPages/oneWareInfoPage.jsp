@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="MyShop2.H2database.OneWareInfoPrint"%>
+<%@ page import="Webshop.H2database.OneWareInfoPrint"%>
 <!DOCTYPE HTML>
 <html>
 <head>

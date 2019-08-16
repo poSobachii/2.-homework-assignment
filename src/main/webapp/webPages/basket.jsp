@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="MyShop2.BasketPack.BasketOrder"%>
+<%@ page import="Webshop.BasketPack.BasketOrder"%>
 <!DOCTYPE HTML>
 <html>
 <head>
