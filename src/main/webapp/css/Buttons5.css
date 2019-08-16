@@ -1,0 +1,54 @@
+.menu_choice {
+  background-color: white;
+  border: none;
+  width: 100px;
+  height: 30px;
+  margin: 0px 0px;
+  cursor: pointer;
+  text-decoration: underline;
+
+}
+
+.menu_choice1{
+    background-image: url(buttons/goods1.gif);
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    cursor: pointer;
+}
+
+.menu_choice2{
+    background-image: url(buttons/goods2.gif);
+    background-repeat: repeat-x;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    cursor: pointer;
+}
+
+.menu_choice3{
+    background-image: url(buttons/goods3.gif);
+    background-repeat: repeat-x;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    cursor: pointer;
+}
+
+.menu_choice4{
+    background-image: url(buttons/goods4.gif);
+    background-repeat: repeat-x;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,130 @@
+body {
+  font-size: 18px;
+  font-family: Comic Sans MS;
+  background-color: #ccd870;
+}
+
+input:focus {
+    outline:none;
+}
+
+html {
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+.TopBackgroundLayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height:120px;
+	background-color: black;
+	z-index:-5;
+}
+
+.topBox{
+	position: absolute;
+	top: 0px;
+	width: 1100px;
+	height: 120px;
+	left: 50%;
+	margin-left:-550px;
+	background-color: black;
+}
+
+
+.TopLeftBox{
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 200px;
+	background-color: transparent;
+
+
+}
+
+.TopRightBox{
+	position: absolute;
+	right: 0;
+	height: 100%;
+	width: 200px;
+	background-color: blue;
+
+}
+
+.TopCenterBox{
+	position: absolute;
+	color: white;
+	text-align: center;
+	left: 210px;
+	right: 210px;
+	height: 100%;
+	background-color: transparent;
+
+}
+
+
+
+.centerWholeBox{
+	position: absolute;
+	width: 1100px;
+	margin-top: 5px;
+	top: 120px;
+	left: 50%;
+	margin-left: -550px;
+	background-color: transparent;
+}
+
+.CenterLeftBox{
+	position: absolute;
+	border: none;
+	top: 0;
+	left: 0;
+	height: auto;
+	width: 140px;
+	background-color: white;
+}
+
+.CenterRightBox{
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: left;
+	height: auto;
+	width: 140px;
+	background-color: white;
+
+
+}
+
+.CenterContentBox{
+	position: absolute;
+	text-align: center;
+	left: 150px;
+	right: 150px;
+	background-color: white;
+	border-radius: 15px;
+}
+
+.contentLoginInstance{
+	position: absolute;
+	text-align: left;
+	left: 150px;
+	right: 150px;
+	background-color: white;
+	padding: 10px 10px;
+
+}
+
+#BoxOfGod{
+    position: absolute;
+    left: 0;
+    top: 75%;
+    height: auto;
+    width: 155px;
+    background-color: red;
+    border: 2px solid #ff7b0f;
+    z-index: 2;
+
+}
