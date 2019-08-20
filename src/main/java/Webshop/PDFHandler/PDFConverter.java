@@ -1,4 +1,4 @@
-package Webshop.PDfHandler;
+package Webshop.PDFHandler;
 
 import Webshop.BasketPack.BasketOrder;
 import Webshop.WareTemplates.BasicWare;
@@ -33,7 +33,7 @@ public class PDFConverter {
         return throwOutDocument();
     }
 
-    public static void prepareDocument(){
+    public void prepareDocument(){
         Document document = new Document();
         try {
             PdfWriter.getInstance(document, new FileOutputStream("uPDFfiles/order.pdf"));

@@ -2,7 +2,7 @@ package Webshop.Controller;
 
 import Webshop.DatabaseDAO.DatabaseDAO;
 import Webshop.H2database.OneWareInfoPrint;
-import Webshop.PDfHandler.PDFConverter;
+import Webshop.PDFHandler.PDFConverter;
 import org.springframework.core.io.Resource;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

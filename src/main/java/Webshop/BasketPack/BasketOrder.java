@@ -43,7 +43,7 @@ public class BasketOrder {
         return stringBuilder;
     }
 
-    public static List<BasicWare> getWareList() {
+    public List<BasicWare> getWareList() {
         return wareList;
     }
 }

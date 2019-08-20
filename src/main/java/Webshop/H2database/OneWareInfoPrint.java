@@ -24,4 +24,8 @@ public class OneWareInfoPrint {
                 wareToPrint.getDescription());
         return stringBuilder;
     }
+
+    public BasicWare getWareToPrint() {
+        return wareToPrint;
+    }
 }
