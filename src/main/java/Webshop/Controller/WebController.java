@@ -34,12 +34,6 @@ public class WebController {
         return "homePage";
     }
 
-    @RequestMapping("/testTemp")
-    public String testTemp() {
-        return "waresPage";
-    }
-
-
     @RequestMapping(value = "/wareContent", method = RequestMethod.GET)
     public String wareContent(HttpServletRequest request, HttpServletResponse response) {
         printContent.PrintWares(dbase.getAllWares(request.getParameter("ware")));

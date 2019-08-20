@@ -11,13 +11,6 @@
 </head>
 <body>
 
-    <div id="BoxOfGod">
-            <h4> Рука Боженьки</h4>
-            <form action = "testTemp"> <input type="submit" value="Check wares"></form>
-            <button onclick="testJS()">JS workin ?</button>
-            <button onclick="printBasket()">Basket Content</button>
-            </div>
-
 	<div class="TopBackgroundLayer">
 	</div>
 

@@ -28,18 +28,6 @@ public class BasketOrder {
         wareList.add(databaseCommander.getOneItem(wareType, Long.parseLong(wareCode)));
     }
 
-
-
-    public static void printJSBasket(){
-        System.out.println("size is: " + wareList.size());
-            int order = 1;
-            for ( BasicWare r : wareList ) {
-            System.out.println("order No:" + order + " - " + r.getWareName()
-                    + "," + r.getId());
-            ++order;
-            }
-    }
-
     public static StringBuilder write() {
         StringBuilder stringBuilder = new StringBuilder();
         for (BasicWare e : wareList) {
