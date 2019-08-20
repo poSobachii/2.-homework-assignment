@@ -89,6 +89,9 @@
     	<form action = "basket">
                        <input type="submit" value="BASKET">
                        </form>
+                       <form action = "pdf" method="post">
+                                                                     <input type="submit" value="PRINT ORDER">
+                                                                     </form>
 
 	</div>
 	</div>

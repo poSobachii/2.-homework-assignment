@@ -3,8 +3,13 @@ package Webshop.Controller;
 import Webshop.DatabaseDAO.DatabaseDAO;
 import Webshop.H2database.OneWareInfoPrint;
 import Webshop.H2database.PrintContent;
+import Webshop.PDfHandler.PDFConverter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,6 +26,8 @@ public class WebController {
     PrintContent printContent;
     @Autowired
     OneWareInfoPrint oneWareInfoPrint;
+    @Autowired
+    PDFConverter pdfConverter;
 
     @RequestMapping(value= {"/", "home"})
     public String welcome() {
@@ -53,4 +60,10 @@ public class WebController {
         return "basket";
     }
 
+    @PostMapping("/pdf")
+    public ResponseEntity<Resource> getPdf(){
+        Resource file = pdfConverter.handleRequest();
+        return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,
+                "attachment; filename=\"" + file.getFilename() + "\"").body(file);
+    }
 }
