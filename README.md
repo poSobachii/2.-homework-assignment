@@ -12,3 +12,12 @@ Assignment Requirements
 -  At the presentation session you should be able to demo at least 2 working functions on your app
 -  You should provide a presentation showing a Sonar report on the test coverage and code quality in your app and explaining the idea you&#39;ve picked and implemented
 -  You should have at least 3 commits per preson on InnerSource repository for  your app.
+
+
+
+mvn sonar:sonar \
+  -Dsonar.projectKey=poSobachii_2.-homework-assignment \
+  -Dsonar.organization=posobachii \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=6dad016e49887f9063d513fa0099ed514a888382
+
