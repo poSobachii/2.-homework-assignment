@@ -9,9 +9,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -29,19 +28,19 @@ public class WebController {
     @Autowired
     PDFConverter pdfConverter;
 
-    @RequestMapping(value= {"/", "home"})
+    @GetMapping(value= {"/", "home"})
     public String welcome() {
         return "homePage";
     }
 
-    @RequestMapping(value = "/wareContent", method = RequestMethod.GET)
+    @GetMapping(value = "/wareContent")
     public String wareContent(HttpServletRequest request, HttpServletResponse response) {
         printContent.PrintWares(dbase.getAllWares(request.getParameter("ware")));
         return "waresPage";
 
     }
 
-    @RequestMapping(value = "/wareInfo", method = RequestMethod.GET)
+    @GetMapping(value = "/wareInfo")
     public String oneWareInfo(HttpServletRequest request, HttpServletResponse response) {
         String temp = request.getParameter("wareGroup");
         Long wareID = Long.parseLong(request.getParameter("wareID"));
@@ -49,7 +48,7 @@ public class WebController {
         return "oneWareInfoPage";
     }
 
-    @RequestMapping("/basket")
+    @GetMapping("/basket")
     public String Basket() {
         return "basket";
     }
