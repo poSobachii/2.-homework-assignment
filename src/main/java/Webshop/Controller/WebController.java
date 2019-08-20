@@ -3,7 +3,7 @@ package Webshop.Controller;
 import Webshop.DatabaseDAO.DatabaseDAO;
 import Webshop.H2database.OneWareInfoPrint;
 import Webshop.H2database.PrintContent;
-import Webshop.PDFHandler.PDFConverter;
+import Webshop.PdfHandler.PDFConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;

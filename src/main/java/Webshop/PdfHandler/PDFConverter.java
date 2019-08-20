@@ -1,4 +1,4 @@
-package Webshop.PDFHandler;
+package Webshop.PdfHandler;
 
 import Webshop.BasketPack.BasketOrder;
 import Webshop.WareTemplates.BasicWare;
@@ -48,7 +48,6 @@ public class PDFConverter {
 
             document.close();
         } catch (DocumentException | IOException e) {
-            e.printStackTrace();
         }
 
     }
@@ -62,7 +61,6 @@ public class PDFConverter {
             }
         }
         catch (MalformedURLException e) {
-            System.out.println("error " + e);
         }
         return null;
     }

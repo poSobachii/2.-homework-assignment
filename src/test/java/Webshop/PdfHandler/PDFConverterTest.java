@@ -1,4 +1,4 @@
-package Webshop.PDFHandler;
+package Webshop.PdfHandler;
 
 import Webshop.BasketPack.BasketOrder;
 import Webshop.Entities.Balloons;
