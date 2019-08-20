@@ -48,7 +48,7 @@ public class PDFConverter {
 
             document.close();
         } catch (DocumentException | IOException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
 
     }
@@ -62,7 +62,7 @@ public class PDFConverter {
             }
         }
         catch (MalformedURLException e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
         return null;
     }
