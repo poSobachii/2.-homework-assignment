@@ -10,11 +10,11 @@ import com.itextpdf.text.Font;
 import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Image;
 import com.itextpdf.text.pdf.PdfWriter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 
-import javax.inject.Inject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -25,8 +25,8 @@ import java.nio.file.Paths;
 @Service
 public class PDFConverter {
 
-    @Inject
-    static BasketOrder basketOrder;
+    @Autowired
+    BasketOrder basketOrder;
 
     public Resource handleRequest(){
         prepareDocument();

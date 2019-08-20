@@ -1,6 +1,5 @@
 package Webshop.H2database;
 
-import Webshop.Entities.TShirts;
 import Webshop.Repository.BalloonRepository;
 import Webshop.Repository.CupsRepository;
 import Webshop.Repository.ShirtRepository;
@@ -11,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.ArrayList;
