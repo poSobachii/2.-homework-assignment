@@ -105,11 +105,6 @@
             <version>5.5.1</version>
             <scope>test</scope>
         </dependency>
-
-
-
-
-
     </dependencies>
     <build>
         <plugins>
@@ -117,35 +112,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-
             </plugin>
-
-            <!--<plugin>-->
-                <!--<groupId>org.jacoco</groupId>-->
-                <!--<artifactId>jacoco-maven-plugin</artifactId>-->
-                <!--<configuration>-->
-                    <!--<destFile>${project.build.directory}/coverage-reports/jacoco-unit.exec</destFile>-->
-                    <!--<dataFile>${project.build.directory}/coverage-reports/jacoco-unit.exec</dataFile>-->
-                    <!--<output>file</output>-->
-                    <!--<append>true</append>-->
-                <!--</configuration>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>jacoco-initialize</id>-->
-                        <!--<goals>-->
-                            <!--<goal>prepare-agent</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                    <!--<execution>-->
-                        <!--<id>jacoco-site</id>-->
-                        <!--<phase>verify</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>report</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
-
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
