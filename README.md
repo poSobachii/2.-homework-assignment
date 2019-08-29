@@ -21,3 +21,11 @@ mvn sonar:sonar \
   -Dsonar.host.url=https://sonarcloud.io \
   -Dsonar.login=6dad016e49887f9063d513fa0099ed514a888382
 
+
+
+cd /Users/aleksandrs.grisanovs/IdeaProjects/Homework/Jenkins-path/
+export MAVEN_HOME=/usr/local/Cellar/maven/3.6.0/libexec
+export PATH=$PATH:$MAVEN_HOME/bin
+mvn --version
+mvn clean
+mvn package
