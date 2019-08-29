@@ -3,8 +3,8 @@ package webshop.pdf.handler;
 import webshop.basket.BasketOrder;
 import webshop.entities.Balloons;
 import webshop.ware.templates.BasicWare;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -18,8 +18,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
 
@@ -36,8 +36,8 @@ public class PDFConverterTest {
     @Mock
     BasicWare basicWareMock;
 
-    @BeforeEach
-    void setup() {
+    @Before
+    public void setup() {
         MockitoAnnotations.initMocks(this);
         ReflectionTestUtils.setField(pdfConverter, "basketOrder", basketOrder);
         basicWare = new Balloons(Long.valueOf(1501), "WareName", 10.99, "10", "WareDescription" );
@@ -45,7 +45,7 @@ public class PDFConverterTest {
     }
 
     @Test
-    void prepareDocumentTest() throws IOException {
+    public void prepareDocumentTest() throws IOException {
         Files.deleteIfExists(Paths.get("uPDFfiles/order.pdf"));
         when(basketOrder.getWareList()).thenReturn(wareList);
         pdfConverter.prepareDocument();
@@ -54,7 +54,7 @@ public class PDFConverterTest {
     }
 
     @Test
-    void throwOutDocument() {
+    public void throwOutDocument() {
         when(basketOrder.getWareList()).thenReturn(wareList);
         pdfConverter.prepareDocument();
         Resource resource = pdfConverter.throwOutDocument();

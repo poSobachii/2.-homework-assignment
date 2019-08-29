@@ -1,18 +1,18 @@
 package webshop.basket;
 
+import org.junit.Before;
+import org.junit.Test;
 import webshop.entities.Cups;
 import webshop.h2.database.DatabaseCommander;
 import webshop.ware.templates.BasicWare;
 import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import static org.hamcrest.Matchers.containsString;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -29,15 +29,15 @@ public class BasketOrderTest {
     @Mock
     DatabaseCommander databaseCommander;
 
-    @BeforeEach
-    void setup(){
+    @Before
+    public void setup(){
         MockitoAnnotations.initMocks(this);
         basicWare = new Cups(Long.valueOf(1), "WareName", 10.99, "10", "WareDescription" );
     }
 
 
     @Test
-    void addOrderTest(){
+    public void addOrderTest(){
         when(databaseCommander.getOneItem("wareType", Long.parseLong("10"))).thenReturn(basicWare);
         basketOrder.addOrder("wareType", "10");
         assertTrue(!basketOrder.getWareList().isEmpty());
@@ -45,7 +45,7 @@ public class BasketOrderTest {
     }
 
     @Test
-    void writeTest(){
+    public void writeTest(){
         wareList.add(basicWare);
         ReflectionTestUtils.setField(basketOrder, "wareList", wareList);
         String result = basketOrder.write().toString();

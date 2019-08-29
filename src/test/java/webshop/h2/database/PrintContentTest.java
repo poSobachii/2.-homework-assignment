@@ -3,8 +3,8 @@ package webshop.h2.database;
 import webshop.entities.TShirtsv2;
 import webshop.ware.templates.BasicWare;
 import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.util.ReflectionTestUtils;
@@ -19,8 +19,8 @@ public class PrintContentTest {
     @InjectMocks
     PrintContent printContent;
 
-    @BeforeEach
-    void setup(){
+    @Before
+    public void setup(){
         MockitoAnnotations.initMocks(this);
         BasicWare basicWare = new TShirtsv2(Long.valueOf(1), "WareName", 10.99, "10", "WareDescription" );
         List<BasicWare> basicWareList = new ArrayList<>();
@@ -29,7 +29,7 @@ public class PrintContentTest {
     }
 
     @Test
-    void writeTest(){
+    public void writeTest(){
         String result = printContent.write().toString();
         Assert.assertThat(result, containsString("onclick=\"return add_to_basket('TShirtsv2','WareName',1)"));
     }

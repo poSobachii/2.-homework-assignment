@@ -1,28 +1,29 @@
 package webshop.basket;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
+
 
 public class OrderTest {
 
     Order newOrder;
 
-    @BeforeEach
-    void setup(){
+    @Before
+    public void setup(){
         newOrder = new Order("wareGrp", Long.valueOf(100));
     }
 
     @Test
-    void getWaregrp(){
+    public void getWaregrp(){
         String returned = newOrder.getWareType();
         assertEquals( "wareGrp", returned);
     }
 
     @Test
-    void getId(){
+    public void getId(){
         Long returned = newOrder.getWareID();
-        assertEquals( 100, returned);
+        assertEquals(100, returned, 0);
     }
 }
