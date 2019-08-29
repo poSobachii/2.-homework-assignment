@@ -29,3 +29,4 @@ export PATH=$PATH:$MAVEN_HOME/bin
 mvn --version
 mvn clean
 mvn package
+
