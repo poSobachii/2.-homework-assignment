@@ -60,6 +60,9 @@ public class DatabaseCommanderTest {
 
     @Test
     public void getOneItemTest(){
-        assertEquals("WareName", basicWare.getWareName() );
+        databaseCommander.getOneItem("TShirts", Long.parseLong("100"));
+        databaseCommander.getOneItem("TShirtsv2", Long.parseLong("100"));
+        databaseCommander.getOneItem("Cups", Long.parseLong("100"));
+        databaseCommander.getOneItem("Balloons", Long.parseLong("100"));
     }
 }

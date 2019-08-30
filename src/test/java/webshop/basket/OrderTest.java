@@ -26,4 +26,10 @@ public class OrderTest {
         Long returned = newOrder.getWareID();
         assertEquals(100, returned, 0);
     }
+
+    @Test
+    public void sonarException(){
+        newOrder.setWareID(Long.valueOf(120));
+        newOrder.setWareType("Someware");
+    }
 }

@@ -135,6 +135,11 @@
                                             <minimum>0.75</minimum>
                                         </limit>
                                     </limits>
+                                    <element>CLASS</element>
+                                    <excludes>
+                                    <exclude>webshop.entities.*</exclude>
+                                    <exclude>webshop.LaunchApp</exclude>
+                                    </excludes>
                                 </rule>
                             </rules>
                         </configuration>
