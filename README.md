@@ -13,8 +13,17 @@ Assignment Requirements
 -  You should provide a presentation showing a Sonar report on the test coverage and code quality in your app and explaining the idea you&#39;ve picked and implemented
 -  You should have at least 3 commits per preson on InnerSource repository for  your app.
 
+MAC setup
+====================
+brew install jenkins-lts
+brew services start jenkins-lts
+brew services stop jenkins-lts
+/usr/local/Cellar/jenkins-lts/2.121.2/homebrew.mxcl.jenkins-lts.plist   === to change port
+/Users/user/.jenkins/
 
 
+Sonar command for report -- https://sonarcloud.io/projects
+===============================
 mvn sonar:sonar \
   -Dsonar.projectKey=poSobachii_2.-homework-assignment \
   -Dsonar.organization=posobachii \
@@ -22,10 +31,13 @@ mvn sonar:sonar \
   -Dsonar.login=6dad016e49887f9063d513fa0099ed514a888382
 
 
-
+Maven job
+===============================
 cd /Users/aleksandrs.grisanovs/IdeaProjects/Homework/Jenkins-path/
 export MAVEN_HOME=/usr/local/Cellar/maven/3.6.0/libexec
 export PATH=$PATH:$MAVEN_HOME/bin
 mvn --version
 mvn clean
 mvn package
+
+
